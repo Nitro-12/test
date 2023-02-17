@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <title>Тест</title>
+	 
+</head>
+<body bgcolor='yellow'>
+
+<form>
+<p>Сколько будет 5*5<br>
+    <label>
+     <input type="radio" name="mem" value="1">
+    25</label>
+    <br>
+    <label>
+    <input type="radio" name="mem" value="0">
+    30</label>
+    <br>
+    <label>
+    <input type="radio" name="mem" value="0">
+    40</label>
+    <br>
+    <label>
+    <input type="radio" name="mem" value="0">
+    50</label>
+</p>
+<p>10 в степени 2?<br>
+    <label>
+     <input type="radio" name="proc" value="1">
+    100</label>
+    <br>
+    <label>
+    <input type="radio" name="proc" value="0">
+    200</label>
+    <br>
+    <label>
+    <input type="radio" name="proc" value="0">
+    50</label>
+    <br>
+    <label>
+    <input type="radio" name="proc" value="0">
+    400</label>
+</p>
+<p>50 в степени 2?<br>
+    <label>
+     <input type="radio" name="proce" value="1">
+    2500</label>
+    <br>
+    <label>
+    <input type="radio" name="proce" value="0">
+    200</label>
+    <br>
+    <label>
+    <input type="radio" name="proce" value="0">
+    150</label>
+    <br>
+    <label>
+    <input type="radio" name="proce" value="0">
+    1400</label>
+</p>
+
+<p>Как тебя зовут?<br>
+  <input type="text" id="mat">
+  </p>
+  <p>
+    <input type="button" id="calc" value="Подсчитать результаты">
+    <input type="reset" value="Сброс">
+  </p>
+    Итого верных ответов: <input type="text" name="result" readonly>
+	
+</form>
+<script>
+calc.onclick = function(){
+    var myform = this.form;
+	var	sum = 0;
+	if(myform.mem.value == '1') sum++;
+    if(myform.proc.value == '1') sum++;
+	if(myform.proce.value == '1') sum++;
+    if ((document.getElementById('mat').value == 'Тимофей') || (document.getElementById('mat').value == 'Иван')) sum++;
+    myform.result.value = sum;
+}
+</script>
+</body>
